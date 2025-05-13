@@ -3,17 +3,18 @@
 Dies ist ein moderner Taschenrechner, entwickelt mit **HTML**, **CSS** und **JavaScript**.  
 Der Taschenrechner verfügt über:
 
-- eine **klassische Tastenfunktion**
-- **Rechenverlauf** (wird lokal im Browser gespeichert)
+- klassische Tastenfunktion (0–9, Grundrechenarten)
+- **Rechenverlauf**, der im `localStorage` gespeichert wird
 - **Backspace/AC-Umschaltung**
-- **Vorzeichen-Umkehr** (+/-)
-- ein **optionales Menü** mit Erweiterungsmöglichkeiten
+- **Vorzeichen ändern** (+/-)
+- ein **Optionsmenü** mit geplanten Erweiterungen
 
-## Geplante Erweiterung
+## Geplante Funktionen (noch nicht aktiv)
 
-Das Menü enthält bereits einen Button für einen **Währungsrechner**.  
-⚠️ **Dieser funktioniert aktuell noch nicht**,  
-wird aber in einer der nächsten Versionen vollständig implementiert.
+Folgende Features sind bereits im Interface sichtbar, aber **noch nicht vollständig implementiert**:
+
+- **Währungsrechner** (Button vorhanden – Funktion kommt bald)
+- **Prozentrechnung (%)** – derzeit nur als Platzhalter, Logik wird noch ergänzt
 
 ## Hinweis
 
@@ -32,6 +33,6 @@ Alle Eingaben und Ergebnisse werden im `localStorage` gespeichert und können ü
 
 ## Live-Demo
 
-_()_
+_(https://southeast-sam.github.io/calculator-with-history/)_
 
 ---
