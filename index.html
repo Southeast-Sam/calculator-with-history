@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taschenrechner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=backspace"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="resultArea"></div>
+
+    <table class="tabelle">
+      <tr>
+        <td onclick="clearLast()" id="toggleClear" class="bg-lightgrey">
+          AC
+          <i id="toggleIcon" class="material-icons backspace-icon">backspace</i>
+        </td>
+        <td onclick="toggleVorzeichen()" class="bg-lightgrey">+/-</td>
+        <td onclick="eintippen(' % ')" class="bg-lightgrey">%</td>
+        <td onclick="eintippen(' / ')" class="bg-orange">/</td>
+      </tr>
+      <tr>
+        <td onclick="eintippen(7)">7</td>
+        <td onclick="eintippen(8)">8</td>
+        <td onclick="eintippen(9)">9</td>
+        <td onclick="eintippen(' * ')" class="bg-orange">*</td>
+      </tr>
+      <tr>
+        <td onclick="eintippen(4)">4</td>
+        <td onclick="eintippen(5)">5</td>
+        <td onclick="eintippen(6)">6</td>
+        <td onclick="eintippen(' - ')" class="bg-orange">-</td>
+      </tr>
+      <tr>
+        <td onclick="eintippen(1)">1</td>
+        <td onclick="eintippen(2)">2</td>
+        <td onclick="eintippen(3)">3</td>
+        <td onclick="eintippen(' + ')" class="bg-orange">+</td>
+      </tr>
+      <tr>
+        <td onclick="optionen()">
+          <i id="optionen-Button" class="material-icons rechner-icon"
+            >calculate</i
+          >
+        </td>
+        <td onclick="eintippen(0)">0</td>
+        <td onclick="eintippen('.')">,</td>
+        <td onclick="calculate()" class="bg-orange">=</td>
+      </tr>
+    </table>
+
+    <div id="verlauf-Fenster" style="display: none">
+      <span id="verlauf-Schliessen" style="cursor: pointer; float: right"
+        >❌</span
+      >
+      <h2 class="verlauf-Ueberschrift">Verlauf</h2>
+      <ul id="verlaufListe"></ul>
+    </div>
+
+    <div id="optionen-Menu" style="display: none">
+      <button id="verlauf-Button">Verlauf</button>
+      <button id="waehrung-Button">Währungsrechner</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
